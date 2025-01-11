@@ -1,0 +1,49 @@
+/* General Styles */
+body {
+  padding-top: 56px; /* To account for fixed navbar */
+}
+
+.navbar {
+  background: #343a40;
+}
+
+#jobs .card {
+  margin-bottom: 20px;
+}
+
+#jobs .card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#jobs .view-button, #jobs .share-button, #jobs .apply-button {
+  margin-right: 10px;
+}
+
+#admin {
+  background-color: #f8f9fa;
+}
+
+footer {
+  background: #343a40;
+  color: #ffffff;
+}
+
+
+
+
+.modal-content {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

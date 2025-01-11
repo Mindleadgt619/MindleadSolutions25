@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mindlead Solutions - Career Page</title>
+  
+  <!-- Link to External CSS -->
+  <link rel="stylesheet" href="styles.css">
+  
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Mindlead Solutions</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#jobs">Jobs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#admin">Admin</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+<section id="home" class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Side Content -->
+      <div class="col-md-6 text-center text-md-start">
+        <h1 class="display-4">Welcome to Mindlead Solutions</h1>
+        <p class="lead">
+          Your trusted partner for unlocking limitless career opportunities. Explore our job listings, career events, and innovative solutions tailored for your success.
+        </p>
+        <a href="#jobs" class="btn btn-primary btn-lg mt-3">Explore Jobs</a>
+      </div>
+
+      <!-- Right Side Image -->
+      <div class="col-md-6 text-center">
+        <img src="im-1.jpg" alt="Welcome Image" class="img-fluid rounded shadow">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Jobs Section -->
+<section id="jobs" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">Available Jobs</h2>
+    <div class="row">
+      <!-- Filter Section -->
+      <div class="col-md-3">
+        <h5 class="mb-4">Filters</h5>
+
+       <!-- Job ID Filter -->
+<div class="mb-3">
+  <input type="text" id="filterJobID" class="form-control" placeholder="Enter Job ID to search" />
+</div>
+
+        <!-- Job Title Filter -->
+        <div class="mb-3">
+          <input type="text" id="filterInput" class="form-control" placeholder="Search by Job Title..." />
+        </div>
+
+        <!-- Location Filter -->
+        <div class="mb-3">
+          <select id="filterLocation" class="form-select">
+            <option value="">All Locations</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Mumbai">Mumbai</option>
+          </select>
+        </div>
+
+        <!-- Experience Filter -->
+        <div class="mb-3">
+          <select id="filterExperience" class="form-select">
+            <option value="">All Experience Levels</option>
+            <option value="0-2">0-2 Years</option>
+            <option value="2-5">2-5 Years</option>
+            <option value="5-10">5-10 Years</option>
+          </select>
+        </div>
+
+        <!-- Salary (CTC) Filter -->
+        <div class="mb-3">
+          <select id="filterCTC" class="form-select">
+            <option value="">All Salary Ranges</option>
+            <option value="0-5">0-5 LPA</option>
+            <option value="5-10">5-10 LPA</option>
+            <option value="10-20">10-20 LPA</option>
+            <option value="20+">20+ LPA</option>
+          </select>
+        </div>
+
+        <!-- Role Type Filter -->
+        <div class="mb-3">
+          <select id="filterRoleType" class="form-select">
+            <option value="">All Role Types</option>
+            <option value="Internship">Internship</option>
+            <option value="Permanent">Permanent</option>
+            <option value="Contract">Contract</option>
+            <option value="Part Time">Part Time</option>
+            <option value="Work From Home">Work From Home</option>
+            <option value="Freelance">Freelance</option>
+          </select>
+        </div>
+
+        <button id="applyFilters" class="btn btn-primary w-100">Apply Filters</button>
+      </div>
+
+      <!-- Job List Section -->
+      <div class="col-md-9" id="jobList">
+        <!-- Job cards will be dynamically added here -->
+      </div>
+    </div>
+  </div>
+</section>
+
+      <!-- Job List -->
+      <div class="col-md-9" id="jobList">
+        <!-- Job cards will be dynamically added here -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="admin" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">Admin Panel</h2>
+    <!-- Password Section -->
+    <div class="mb-3">
+      <label for="adminPassword" class="form-label">Admin Password</label>
+      <input type="password" class="form-control" id="adminPassword" placeholder="Enter password to proceed" required />
+      <button id="verifyPassword" class="btn btn-primary mt-2">Verify Password</button>
+    </div>
+    
+    <!-- Admin Form Section -->
+    <form id="jobForm" class="d-none">
+      <!-- Job Title -->
+      <div class="mb-3">
+        <label for="title" class="form-label">Job Title</label>
+        <input type="text" class="form-control" id="title" placeholder="Enter job title" required />
+      </div>
+
+      <!-- Experience -->
+      <div class="mb-3">
+        <label for="experience" class="form-label">Experience</label>
+        <input type="text" class="form-control" id="experience" placeholder="Enter required experience (e.g., 2 - 4 years)" required />
+      </div>
+
+      <!-- CTC -->
+      <div class="mb-3">
+        <label for="ctc" class="form-label">CTC</label>
+        <input type="text" class="form-control" id="ctc" placeholder="Enter CTC (e.g., 10 - 20 LPA)" required />
+      </div>
+
+      <!-- Role Type -->
+      <div class="mb-3">
+        <label for="roleType" class="form-label">Role Type</label>
+        <input type="text" class="form-control" id="roleType" placeholder="Enter role type (e.g., Permanent, Contract)" required />
+      </div>
+
+      <!-- Location -->
+      <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input type="text" class="form-control" id="location" placeholder="Enter job location" required />
+      </div>
+
+<!-- Job ID -->
+<div class="mb-3">
+  <label for="jobId" class="form-label">Job ID</label>
+  <input type="text" class="form-control" id="jobId" placeholder="Enter a custom Job ID" required />
+</div>
+
+  <!-- Application Link -->
+  <div class="mb-3">
+    <label for="applicationLink" class="form-label">Application Link</label>
+    <input type="url" class="form-control" id="applicationLink" placeholder="Enter application link (e.g., https://apply.example.com)" required />
+  </div>
+
+      <!-- Description -->
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <div
+          id="description"
+          contenteditable="true"
+          class="form-control"
+          style="height: 150px; overflow-y: auto; border: 1px solid #ced4da; padding: 10px;"
+          placeholder="Enter detailed job description (supports bullets, bold, etc.)"
+        ></div>
+      </div>
+
+      <!-- Job ID Search -->
+      <div class="mb-3">
+        <label for="jobIdSearch" class="form-label">Search by Job ID</label>
+        <input type="text" class="form-control" id="jobIdSearch" placeholder="Enter Job ID to Edit/Delete" />
+      </div>
+
+      <!-- Admin Controls -->
+      <div class="d-flex justify-content-between">
+        <button type="submit" class="btn btn-primary">Add Job</button>
+        <button id="editButton" class="btn btn-warning">Edit Job</button>
+        <button id="deleteButton" class="btn btn-danger">Delete Job</button>
+        <button id="saveButton" class="btn btn-success d-none">Save Changes</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="text-center py-4 bg-dark text-light">
+    <p>&copy; 2025 Mindlead Solutions. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Link to External JS -->
+  <script src="script.js"></script>
+</body>
+</html>
